@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Only Square - Receipt</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="receiptA">
+  <!--Header with Name,Logo and navigation-->
+<header>
+  <div class="container row">
+    <div class="brand">
+      <img src="../Assets/Logo.jpg" alt="Only Square logo">
+      <h1>Only Square</h1>
+    </div>
+     <button id="menuToggle" aria-expanded="false" aria-controls="siteNav">Menu</button> <!--Menu for mobile-->
+    <!--Navigation Bar-->
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="about.html">About</a>
+      <a href="contactus.html">Contact Us</a>
+    </nav>
+    <div class="head-right"><span id="userBox">Receipt</span></div>
+  </div>
+</header>
+
+<main class="container receipt-wrap receipt--brand" id="receiptA">
+  <section class="card receipt-container">
+    <div class="receipt-head">
+      <div class="receipt-brand">
+        <img src="../Assets/Logo.jpg" alt="Only Square logo">
+        <div>
+          <h1>Order Receipt</h1>
+          <div class="muted">Thanks for shopping with Only Square.</div>
+        </div>
+      </div>
+      <div><div id="rId" class="tag">Receipt #</div></div>
+    </div>
+
+    <hr>
+
+    <div class="recieptinfo">
+      <div class="k"><strong>Customer</strong><br><span id="rName" class="muted">—</span></div>
+      <div class="k"><strong>Address</strong><br><span id="rAddr" class="muted">—</span></div>
+      <div class="k"><strong>Order Date</strong><br><span id="rDate" class="muted">—</span></div>
+      <div class="k"><strong>Shipping (2 business days)</strong><br><span id="rShip" class="muted">—</span></div>
+    </div>
+
+    <h3>Items</h3>
+    <table class="table">
+      <thead><tr><th>Item</th><th>Price</th><th>Qty</th><th>Sub-total</th></tr></thead>
+      <tbody id="rItems"></tbody>
+      <tfoot>
+        <tr><th colspan="3">Subtotal</th><td id="rSub">$0.00</td></tr>
+        <tr><th colspan="3">Discount</th><td id="rDis">-$0.00</td></tr>
+        <tr><th colspan="3">Tax</th><td id="rTax">$0.00</td></tr>
+        <tr><th colspan="3">Total</th><td id="rTot">$0.00</td></tr>
+      </tfoot>
+    </table>
+
+    <p class="thankyou">Thank you for ordering! We appreciate your business.</p>
+
+    <div class="controls">
+      <button id="printBtn" class="btn">Print Receipt</button>
+      <a class="btn secondary" href="index.html">Close</a>
+    </div>
+  </section>
+</main>
+ <footer class="site-footer" role="contentinfo">
+    <small>Hosting:GitHub</small><br/>
+    <small>© 2025 Only Square</small>
+  </footer>
+<script src="../script.js"></script>
+</body>
+</html>

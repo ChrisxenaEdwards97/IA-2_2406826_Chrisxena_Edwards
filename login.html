@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Only Square - Login</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<!--Header with Name,Logo and navigation-->
+<header>
+  <div class="container row">
+    <div class="brand">
+      <img src="../Assets/Logo.jpg" alt="Only Square logo">
+      <h1>Only Square</h1>
+    </div>
+    
+     <button id="menuToggle" aria-expanded="false" aria-controls="siteNav">Menu</button><!--Mobile Menu-->
+     
+    <!--Navigation Bar-->
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="about.html">About</a>
+      <a href="contactus.html">Contact Us</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+    <!--Logout Button and Login Status-->
+    <div class="head-right">
+      <span id="userBox">Not signed in</span>
+      <button id="logoutBtn" class="btn-chip">Logout</button>
+    </div>
+  </div>
+</header>
+
+<!-- Main Container(Login Forn)-->
+<main class="container">
+  <section class="card">
+    <h1>Login</h1>
+    <form id="loginForm" novalidate>
+      <p id="loginErrors" ></p> <!--Error if the Login is invalid-->
+      <label for="username">Username</label>
+      <input id="username" name="username" required>
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required>
+
+      <div class="loginSubmit">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </section>
+</main>
+ <footer class="site-footer" role="contentinfo">
+    <small>Hosting:GitHub</small><br/>
+    <small>© 2025 Only Square</small>
+  </footer>
+<script src="../script.js"></script>
+</body>
+</html>

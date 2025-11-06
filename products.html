@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Only Square - Products</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<!--Header with Name,Logo and navigation-->
+<header>
+  <div class="container row">
+    <div class="brand">
+      <img src="../Assets/Logo.jpg" alt="Only Square logo">
+      <h1>Only Square</h1>
+    </div>
+    
+   <button id="menuToggle" aria-expanded="false" aria-controls="siteNav">Menu</button><!--Menu for mobile-->
+   
+<!--Navigation Bar-->
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="about.html">About</a>
+      <a href="contactus.html">Contact Us</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+    <!--Logout Button and Login Status-->
+    <div class="head-right">
+      <span id="userBox">Not signed in</span>
+      <button id="logoutBtn" class="btn-chip">Logout</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h1>Products</h1>
+    <p>Shop around we have what you need!</p>
+    <p id="cartNotice" aria-live="polite"></p>
+  </section>
+
+  <div class="grid"> <!--Product grid-->
+    
+    <div class="product-card card">
+      <img src="../Assets/product1.png" alt="Starter Kit">
+      <h3>Starter Kit</h3>
+      <p>$25.00</p>
+      <button data-add='{"id":"p1","name":"Starter Kit","price":25}'>Add to Cart</button>
+    </div>
+    
+
+    <div class="product-card card">
+      <img src="../Assets/product2.png" alt="Chisel Set">
+      <h3>Chisel Set</h3>
+      <p>$45.00</p>
+      <button data-add='{"id":"p2","name":"Chisel Set","price":45}'>Add to Cart</button>
+    </div>
+    
+
+    <div class="product-card card">
+      <img src="../Assets/product3.png" alt="Safety Bundle">
+      <h3>Safety Bundle</h3>
+      <p>$35.00</p>
+      <button data-add='{"id":"p3","name":"Safety Bundle","price":35}'>Add to Cart</button>
+    </div>
+    
+
+    <div class="product-card card">
+      <img src="../Assets/product4.jpg" alt="Workbench">
+      <h3>Workbench</h3>
+      <p>$60.00</p>
+      <button data-add='{"id":"p4","name":"Workbench","price":60}'>Add to Cart</button>
+    </div>
+    
+
+    <div class="product-card card">
+      <img src="../Assets/product5.jpg" alt="Saw">
+      <h3>Saw</h3>
+      <p>$30.00</p>
+      <button data-add='{"id":"p5","name":"Saw","price":30}'>Add to Cart</button>
+    </div>
+    
+
+    <div class="product-card card">
+      <img src="../Assets/product6.jpg" alt="Hammer">
+      <h3>Hammer</h3>
+      <p>$15.00</p>
+      <button data-add='{"id":"p6","name":"Hammer","price":15}'>Add to Cart</button>
+    </div>
+    
+  </div>
+
+  <div class="card product-nav">
+  <div></div>
+  <div><a class="btn" href="products-2.html">Next →</a></div>
+</div>
+</main>
+<!--Footer (copyright and hosting)-->
+ <footer class="site-footer" role="contentinfo">
+    <small>Hosting:GitHub</small><br/>
+    <small>© 2025 Only Square</small>
+  </footer>
+<script src="../script.js"></script>
+</body>
+</html>

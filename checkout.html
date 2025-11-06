@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Only Square - Checkout</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <!--Header with Name,Logo and navigation-->
+<header>
+  <div class="container row">
+    <div class="brand">
+      <img src="../Assets/Logo.jpg" alt="Only Square logo" />
+      <h1>Only Square</h1>
+    </div>
+
+    <button id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button><!--Mobile Menu-->
+
+    <!--Navigation Bar-->
+    <nav class="nav" id="siteNav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="about.html">About</a>
+      <a href="contactus.html">Contact Us</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+<!--Logout Button and Login Status-->
+    <div class="head-right">
+      <span id="userBox">Not signed in</span>
+      <button id="logoutBtn" class="btn-chip" type="button">Logout</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="layout-split">
+
+    <!-- Checkout Form -->
+    <section class="card">
+      <h1>Checkout</h1>
+      <form id="checkoutForm" novalidate>
+        <p id="checkoutErrors" class="error"></p>
+        <!--Form Information-->
+        <label for="shippingName">Full Name</label>
+        <input id="shippingName" name="shippingName" type="text" required />
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+
+        <h2 class="mt-16">Payment Information</h2>
+
+        <label for="cardName">Cardholder Name</label>
+        <input id="cardName" name="cardName" type="text" required />
+
+        <label for="cardNumber">Card Number</label>
+        <input id="cardNumber" name="cardNumber" type="text" inputmode="numeric" placeholder="1234123412341234" required />
+
+        <label for="expiry">Expiry (MM/YY)</label>
+        <input id="expiry" name="expiry" type="text" placeholder="08/27" required />
+
+        <label for="cvv">CVV</label>
+        <input id="cvv" name="cvv" type="text" inputmode="numeric" placeholder="123" required />
+        
+        <!--Control Buttons for Checkout form-->
+        <div class="btn-row mt-10">
+          <button type="submit" id="confirmCheckoutBtn">Confirm</button>
+          <button type="button" id="cancelCheckoutBtn" class="secondary">Cancel</button>
+          <button type="button" id="clearAllCheckoutBtn" class="warning">Clear All</button>
+          <button type="button" id="closeCheckoutBtn" class="secondary">Close</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Summary Section -->
+    <aside class="card">
+      <h2>Your Cart Summary</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr><th>Item</th><th>Price</th><th>Qty</th><th>Sub-total</th><th></th></tr>
+          </thead>
+          <tbody id="cartBody"></tbody>
+          <tfoot>
+            <tr><th colspan="3">Subtotal</th><td id="ftSubtotal">$0.00</td><td></td></tr>
+            <tr><th colspan="3">Discount</th><td id="ftDiscount">-$0.00</td><td></td></tr>
+            <tr><th colspan="3">Tax</th><td id="ftTax">$0.00</td><td></td></tr>
+            <tr><th colspan="3">Total</th><td id="ftTotal">$0.00</td><td></td></tr>
+          </tfoot>
+        </table>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <small>Hosting: GitHub</small><br />
+  <small>© 2025 Only Square</small>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
